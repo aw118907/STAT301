@@ -1,0 +1,14 @@
+Author: Arie Williams-Fogle Date: September 3, 2021 purpose: Calculate ANNOVA on sample data
+
+library(dplyr)
+
+PATH <- "https://raw.githubusercontent.com/guru99-edu/R-Programming/master/poisons.csv
+
+df <- read.csv(PATH) %>% select(-X) %>% mutate(poison = factor(poison, ordered = TRUE)) 
+
+glimpse(df)
+
+
+#levels/ranks of variable/column poison
+
+levels(df$poison)
